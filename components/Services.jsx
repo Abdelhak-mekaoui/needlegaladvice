@@ -43,7 +43,7 @@ const data = [
 
 export default function Services() {
     return (
-      <div className="bg-[#f1f1f1] relative isolate overflow-hidden  py-24 flex justify-center sm:py-12">
+      <div className="bg-[#f1f1f1] relative isolate overflow-hiddenflex justify-center sm:pb-24 pt-12">
     
        
         <div className="mx-auto max-w-7xl px-6 lg:px-4 ">
@@ -51,7 +51,7 @@ export default function Services() {
           <h2 className="text-center font-bold leading-7 text-[#2d5391] text-[1rem] pb-4">Experts in Legal Advice <br /><br /><span className="font-light pt-4 text-[1.5rem]">Learn More About Our</span><br /><span className="text-[1.6rem]">Services</span></h2>
 
 
-            <div className="mt-2 gap-4 items-center grid grid-cols-1 md:grid-cols-3">
+            <div className="mt-2 gap-4 lg:gap-[15%] items-center grid grid-cols-1 md:grid-cols-3">
                 {data?.map((menu) => (
                     <ServiceCard menu={menu} />
                 ))}
