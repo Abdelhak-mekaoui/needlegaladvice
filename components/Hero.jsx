@@ -1,3 +1,4 @@
+import Link from 'next/link'
 
 export default function Hero() {
     return (
@@ -19,7 +20,7 @@ export default function Hero() {
                 
                 <div className="card-actions flex justify-center">
                 <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
-                <button className="btn btn-primary rounded-3xl w-36 ">Submit</button>
+                <Link href="/contact" className="btn btn-primary rounded-3xl w-36 ">Submit</Link>
                 </div>
             </div>
             </div>
