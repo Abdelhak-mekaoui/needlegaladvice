@@ -64,7 +64,7 @@ export default function Example() {
              src="./form_img.png" alt="" />
         </div>
 
-        <div className="isolate bg-white px-2 w-full py-12 sm:py-16   lg:max-h-screen">
+        <div className="border border-2 m-2 border-blue-600 rounded-2xl solid border border-xl solid bg-white px-2 w-full py-8 sm:py-12   lg:max-h-screen">
       <div className="mx-auto max-w-2xl text-center flex flex-raw gap-6 justify-center lg:gap-12">
         <div className="border solid rounded-full bg-green-400 px-4 py-4 flex items-center justify-center w-12 h-12 font-bold text-8  text-white">1</div>
         <div className="border-2 solid border-blue-600 rounded-full bg-white px-4 py-4 flex items-center justify-center w-12 h-12 font-bold text-8 text-blue-600">2</div>
@@ -76,7 +76,7 @@ export default function Example() {
           <div>
             <label className="w-full max-w-xs">
                   <div className="label">
-                      <span className="label-text">Where you injured ?</span>
+                      <span className="label-text">Where you injured ?*</span>
                   </div>
                   <select className=" block w-full select select-bordered">
                       <option disabled selected>Pick one</option>
@@ -90,7 +90,7 @@ export default function Example() {
           <div >
             <label className="w-full  max-w-xs">
                   <div className="label">
-                      <span className="label-text">Where you injured ?</span>
+                      <span className="label-text">Incident date *</span>
                   </div>
                   <Datepicker classNames='block w-full' options={options} onChange={handleChange} show={show} setShow={handleClose} />
               </label>
@@ -99,7 +99,7 @@ export default function Example() {
             <div>
             <label className="w-full max-w-xs">
                   <div className="label">
-                      <span className="label-text">Where you injured ?</span>
+                      <span className="label-text">Was It your fault ?*</span>
                   </div>
                   <select className=" block w-full select select-bordered">
                       <option disabled selected>Pick one</option>
@@ -112,7 +112,7 @@ export default function Example() {
           <div>
             <label className="w-full max-w-xs">
                   <div className="label">
-                      <span className="label-text">Where you injured ?</span>
+                      <span className="label-text">Received Medical Treatment *</span>
                   </div>
                   <select className=" block w-full select select-bordered">
                       <option disabled selected>Pick one</option>
@@ -125,7 +125,7 @@ export default function Example() {
           <div>
             <label className="w-full max-w-xs">
                   <div className="label">
-                      <span className="label-text">Where you injured ?</span>
+                      <span className="label-text">Do you have attorney ? *</span>
                   </div>
                   <select className=" block w-full select select-bordered">
                       <option disabled selected>Pick one</option>
@@ -136,8 +136,8 @@ export default function Example() {
               </label>
           </div>
             <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-              Message
+            <label htmlFor="message" className="label-text ">
+            Case Notes *
             </label>
             <div className="mt-2.5">
               <textarea

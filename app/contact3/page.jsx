@@ -16,9 +16,9 @@ export default function Example() {
              className='hidden lg:block'
              src="./form_img.png" alt="" />
         </div>
-        <div className="isolate bg-white px-2 w-full py-12 sm:py-16   lg:max-h-screen">
+        <div className="border border-2 m-2 border-blue-600 rounded-2xl solid border border-xl solid bg-white px-2 w-full py-8 sm:py-12   lg:max-h-screen">
 
-      <div className="mx-auto max-w-2xl text-center flex flex-raw gap-6 justify-center lg:gap-12">
+      <div className="mx-auto max-w-2xl text-center flex flex-raw gap-6 justify-center lg:gap-12  ">
         <div className="border solid rounded-full bg-green-400 px-4 py-4 flex items-center justify-center w-12 h-12 font-bold text-8  text-white">1</div>
         <div className="border solid rounded-full bg-green-400 px-4 py-4 flex items-center justify-center w-12 h-12 font-bold text-8  text-white">2</div>
         <div className="border solid rounded-full bg-green-400 px-4 py-4 flex items-center justify-center w-12 h-12 font-bold text-8  text-white">3</div>

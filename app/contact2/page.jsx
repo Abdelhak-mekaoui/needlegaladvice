@@ -16,8 +16,7 @@ export default function Example() {
              className='hidden lg:block'
              src="./form_img.png" alt="" />
         </div>
-        <div className="isolate bg-white px-2 w-full py-12 sm:py-16  lg:max-h-screen">
-
+        <div className="border border-2 m-2 border-blue-600 rounded-2xl solid border border-xl solid bg-white px-2 w-full py-8 sm:py-12   lg:max-h-screen">
       <div className="mx-auto max-w-2xl text-center flex flex-raw gap-6 justify-center lg:gap-12">
         <div className="border solid rounded-full bg-green-400 px-4 py-4 flex items-center justify-center w-12 h-12 font-bold text-8  text-white">1</div>
         <div className="border solid rounded-full bg-green-400 px-4 py-4 flex items-center justify-center w-12 h-12 font-bold text-8  text-white">2</div>
@@ -184,7 +183,12 @@ export default function Example() {
         
           
         </div>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex justify-center gap-4">
+          <Link href="/contact"
+            className="block w-[30%] rounded-2xl bg-red-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+          Previous
+          </Link>
           <Link href="/contact3"
             className="block w-[30%] rounded-2xl bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
