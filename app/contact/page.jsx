@@ -87,14 +87,15 @@ export default function Example() {
               </label>
           </div>
 
-          <div >
-            <label className="w-full  max-w-xs">
+          <div>
+            <label className="w-full max-w-xs">
                   <div className="label">
-                      <span className="label-text">Incident date *</span>
+                      <span className="label-text">Incident Date*</span>
                   </div>
-                  <Datepicker classNames='block w-full' options={options} onChange={handleChange} show={show} setShow={handleClose} />
+                  <input type="text" placeholder="Incident date" className="input input-bordered w-full max-w-xs" />
               </label>
           </div>
+         
           
             <div>
             <label className="w-full max-w-xs">
