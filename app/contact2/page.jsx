@@ -1,14 +1,49 @@
 'use client'
 import { useState } from 'react'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Example() {
-  const [agreed, setAgreed] = useState(false)
+  
+  const router = useRouter();
+  const [agreed, setAgreed] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber1, setPhoneNumber1] = useState('');
+  const [phoneNumber2, setPhoneNumber2] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [zipcode, setZipcode] = useState('');
 
+
+  const validateForm = () => {
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !phoneNumber1 ||
+      !phoneNumber2 ||
+      !address ||
+      !city ||
+      !state ||
+      !zipcode
+    ) {
+      alert('Please fill out all fields before proceeding.');
+      return false;
+    }
+    return true;
+  };
+
+  const loadNext = () => {
+    if (validateForm()) {
+      router.push('/contact3');
+    }
+  };
+  const LoadPrev = () => {
+    router.push('/contact')
+  }
   return (
     <div className="flex flex-raw w-full items-center justify-around lg:justify-center bg-white lg:px-36 xl:gap-4 xl:px-40">
         <div>
@@ -30,6 +65,7 @@ export default function Example() {
             </label>
             <div className="mt-2.5">
               <input
+                onChange={(e) => setFirstName(e.target.value)}
                 type="text"
                 name="first-name"
                 id="first-name"
@@ -44,6 +80,7 @@ export default function Example() {
             </label>
             <div className="mt-2.5">
               <input
+                onChange={(e) => setLastName(e.target.value)}
                 type="text"
                 name="last-name"
                 id="last-name"
@@ -58,6 +95,7 @@ export default function Example() {
             </label>
             <div className="mt-2.5">
               <input
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 name="email"
                 id="email"
@@ -66,70 +104,49 @@ export default function Example() {
               />
             </div>
           </div>
-          <div >
-            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
-              Phone number 1
+
+          <div>
+            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            Phone number 1
             </label>
-            <div className="relative mt-2.5">
-              <div className="absolute inset-y-0 left-0 flex items-center">
-                <label htmlFor="country" className="sr-only">
-                  Country
-                </label>
-                <select
-                  id="country"
-                  name="country"
-                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                >
-                  <option>US</option>
-                  <option>CA</option>
-                  <option>EU</option>
-                </select>
-           
-              </div>
+            <div className="mt-2.5">
               <input
-                type="tel"
-                name="phone-number"
-                id="phone-number"
-                autoComplete="tel"
-                className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              onChange={(e) => setPhoneNumber1(e.target.value)}
+                type="text"
+                name="last-name"
+                id="last-name"
+                autoComplete="family-name"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
           <div>
-            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
-              Phone number 2
+            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            Phone number 2
             </label>
-            <div className="relative mt-2.5">
-              <div className="absolute inset-y-0 left-0 flex items-center">
-                <label htmlFor="country" className="sr-only">
-                  Country
-                </label>
-                <select
-                  id="country"
-                  name="country"
-                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                >
-                  <option>US</option>
-                  <option>CA</option>
-                  <option>EU</option>
-                </select>
-           
-              </div>
+            <div className="mt-2.5">
               <input
-                type="tel"
-                name="phone-number"
-                id="phone-number"
-                autoComplete="tel"
-                className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              onChange={(e) => setPhoneNumber2(e.target.value)}
+                type="text"
+                name="last-name"
+                id="last-name"
+                autoComplete="family-name"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
+
+
+          
+
+
           <div className="sm:col-span-2">
             <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
               Address
             </label>
             <div className="mt-2.5">
               <input
+              onChange={(e) => setAddress(e.target.value)}
                 type="text"
                 name="last-name"
                 id="last-name"
@@ -143,7 +160,7 @@ export default function Example() {
                   <div className="label">
                       <span className="label-text">City</span>
                   </div>
-                  <select className=" block w-full select select-bordered">
+                  <select onChange={(e) => setCity(e.target.value)} className=" block w-full select select-bordered">
                       <option disabled selected>Pick one</option>
                       <option>Yes</option>
                       <option>No</option>
@@ -158,6 +175,7 @@ export default function Example() {
             </label>
             <div className="mt-2.5">
               <input
+              onChange={(e) => setState(e.target.value)}
                 type="text"
                 name="last-name"
                 id="last-name"
@@ -172,6 +190,7 @@ export default function Example() {
             </label>
             <div className="mt-2.5">
               <input
+              onChange={(e) => setZipcode(e.target.value)}
                 type="text"
                 name="last-name"
                 id="last-name"
@@ -184,16 +203,15 @@ export default function Example() {
           
         </div>
         <div className="mt-10 flex justify-center gap-4">
-          <Link href="/contact"
+          <button onClick={()=>LoadPrev()}
             className="block w-[30%] rounded-2xl bg-red-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
           Previous
-          </Link>
-          <Link href="/contact3"
-            className="block w-[30%] rounded-2xl bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
+          </button>
+          <button onClick={()=>loadNext()}
+            className="block w-[30%] rounded-2xl bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
           Next
-          </Link>
+          </button>
         </div>
       </form>
       </div>
